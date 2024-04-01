@@ -2,12 +2,12 @@ import Card from "./components/Card";
 import Advertise from "./components/Advertise";
 import TicketCard from "./components/TicketCard";
 import { useContext } from "react";
-import { ThemeContextProvider } from "@/context/ThemeContext";
+// import { ThemeContextProvider } from "@/context/ThemeContext";
 
 export default function Home() {
 
-  const {theme} =useContext(ThemeContex)
-  console.log(theme);
+  // const {theme} =useContext(ThemeContex)
+  // console.log(theme);
   return (
     <div style={{display: 'grid', alignItems: 'end', margin: '35px', marginTop: 'auto'}}>
     <span style={{marginTop: '15px', marginBottom: '-74px', marginLeft: '99px', fontFamily: 'poppins', fontSize: '24px', fontWeight: '700', display: 'flex', textDecoration: 'underline', textDecorationColor: '#738FFF', textDecorationThickness: '2px', lineHeight: '2px'}}>Sports</span>

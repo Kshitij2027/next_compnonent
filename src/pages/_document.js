@@ -1,4 +1,4 @@
-import { ThemeContextProvider } from "@/context/ThemeContext";
+// import { ThemeContextProvider } from "@/context/ThemeContext";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -6,10 +6,10 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
-        <ThemeContextProvider>
+        {/* <ThemeContextProvider> */}
         <Main />
         <NextScript />
-        </ThemeContextProvider>
+        {/* </ThemeContextProvider> */}
       </body>
     </Html>
   );
