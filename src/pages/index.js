@@ -1,118 +1,41 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import Card from "./components/Card";
+import Advertise from "./components/Advertise";
+import TicketCard from "./components/TicketCard";
+import { useContext } from "react";
+import { ThemeContextProvider } from "@/context/ThemeContext";
 
 export default function Home() {
+
+  const {theme} =useContext(ThemeContex)
+  console.log(theme);
   return (
+    <div style={{display: 'grid', alignItems: 'end', margin: '35px', marginTop: 'auto'}}>
+    <span style={{marginTop: '15px', marginBottom: '-74px', marginLeft: '99px', fontFamily: 'poppins', fontSize: '24px', fontWeight: '700', display: 'flex', textDecoration: 'underline', textDecorationColor: '#738FFF', textDecorationThickness: '2px', lineHeight: '2px'}}>Sports</span>
     <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+    className={`flex min-h-screen flex-row items-center justify-between p-2`} style={{padding: '12vh', paddingBottom: '0'}}>
+      <div style={{display: 'flex', width: '1241px', height: '637px'}}>
+      <Card imageUrl={'https://s3-alpha-sig.figma.com/img/ceed/8067/dc33760174d3f67737f6e318d0f118ff?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=F2XxKQcUNpnjUfqPSEoBDs1fA2T2ynT30pmeBbbJh8ADDuqsounqPy2h5snUTaNLrXmBSn3WLCzp0n2OT-QW-YTvS-z2mJHJ6qjt2YKrUp47e-cjjKeMCUFbLFl1st3rJjLbv0LslNuyK2PcJ7sfJvoojd2jJrTkPwtCe~fh8aXrwNSkOfd6fBp5EH6WVggIjH~17u23Nxit7mJ3gnCJVAFnyCwu7GXicoEtWv3OQ6g4X7r91yeBwHIuSi~KlMIqvE57pklcMv80Q6TC5meP~-Tk70JwQVh9kJFCBf5kGia04Ta-8Jgjo8h6GaYCkbtJuphhniHWXT4dnVFsj7xMmQ__'} title={'Sacramento River Cats'} totalEvents={'48 Events'} sports={'Baseball'}/>
+      <Card imageUrl={'https://s3-alpha-sig.figma.com/img/b290/2f7a/b2fcf21c696811f745109da24a740d73?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SL2NyvBA-RmV9CySCr0HqaIDFJPJfx24z5ukOpUhta6I9GYXc65jVXyjYdWiNUOcTOt2pbLQb2rK1ME8yx1Xkvvw14syZfWGf9I-Bx~7rNiIGN4EetaP9GdAdoJpMJP2cYcwI2HwhG5p4P~LHqFKou0RO~ZEZcMOPJxJct8ini~YOjXlxwbDdvfk6v8UGdmtaXuR43hC36YWrAdNVcfWnkNY3LrxnefSV6pJmr6-M9fOwGOpWFqWE08XG9YjfexBZQmEM7MLfm338bYXaIXLtAwQGvnhqrrmwCl4wHPPc95mDocM14BBhj8aUaDvPMpBAWUKhw2OYXVoUBbvcNditw__'} title={'Las Vegas Aviators'} totalEvents={'28 Events'} sports={'Baseball'}/>
+      <Card imageUrl={'https://s3-alpha-sig.figma.com/img/a24a/d1e0/76e2b366b2456bbd169b0c3c9525252c?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fnhdy7dQOQtLfNEts8Y48S1XXIo78WTAF8NMCby7P4sjC6OTdliMhF0d0tAj~lmWSrjvqUtg7~AfR9Cu7UzkprB34TEfUwdP17WZw6ak-PHZ5KUq43yWAfJQbKTahlsvrfN9t8YcNsp538gquzN~Q4gOC5DyWALE0EhpvBxb4NimSNiTG4WjdxfSwz5eOHvqWLk57~o3erxXoDjv0quRDx7PvAKyLnzLkW7L-2ivUCwu1QnVd4ZEDQez5aU8Gf0CRrwva7Tsoj5ZuQdw1yBolX9aJ1deMVeCinrZUWkKaLkTntZYMMP5GuIM9pr2sCp3MZiCGDZnwtQBcQwh0gS0TQ__'} title={'Sacramento River Cats'} totalEvents={'48 Events'} sports={'Baseball'}/>
+      <Card imageUrl={'https://s3-alpha-sig.figma.com/img/ceed/8067/dc33760174d3f67737f6e318d0f118ff?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=F2XxKQcUNpnjUfqPSEoBDs1fA2T2ynT30pmeBbbJh8ADDuqsounqPy2h5snUTaNLrXmBSn3WLCzp0n2OT-QW-YTvS-z2mJHJ6qjt2YKrUp47e-cjjKeMCUFbLFl1st3rJjLbv0LslNuyK2PcJ7sfJvoojd2jJrTkPwtCe~fh8aXrwNSkOfd6fBp5EH6WVggIjH~17u23Nxit7mJ3gnCJVAFnyCwu7GXicoEtWv3OQ6g4X7r91yeBwHIuSi~KlMIqvE57pklcMv80Q6TC5meP~-Tk70JwQVh9kJFCBf5kGia04Ta-8Jgjo8h6GaYCkbtJuphhniHWXT4dnVFsj7xMmQ__'} title={'Sacramento River Cats'} totalEvents={'48 Events'} sports={'Baseball'}/>
+      <Advertise image={'https://s3-alpha-sig.figma.com/img/c724/731e/f71497e0e3af85c77fa47046bb1f23cb?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YfHZuev7WUagkCJeDUVdHbkG5bqC2YmjXKJSZLKbyymg8PLUCF1d-3ITeG2OSpcKgHjVq3lbGf7eLgT0-RWii9vAbSSrltvD7RI88jX3A1p0QZTvL~643uJOzylJw00w1DWQKzrTEHLkK2D4jxJ4n3C9D03B-Odrn9zVjUWBi9mqnU5op991kONICO-AT7eCWb2APcuZxUGYnj8xpoj5L5modFS2ABEy2X1gaT0HXJZoVu2276JkODvrtjnC3F4~lM3f7rLQQam1iI8a3frGTCuFQfbXM3VAQ7nfBJDVDCcyeJcyc4m1oPldx2ONzo2CGn5jRfonRO5RlD-OHbierA__'} title={'Advertisement title'} description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}/>
       </div>
     </main>
+      <div style={{marginTop: '-100px', display: 'flex', justifyContent: 'center'}}>
+        <button style={{width: '124px', height: '46px', background: '#2C9CF0'}}> Show More</button>
+        <button style={{width: '124px', height: '46px', background: '#2C9CF0', marginLeft: '10px'}}>Theme</button>
+      </div>
+      <div style={{marginTop: '40px', width: '1265px', height: '918px', background: 'linear-gradient(180deg, #18282A 0%, #221A2C 100%)', marginLeft: '100px', alignItems: 'center'}}>
+        <div style={{display: 'flex', flexDirection: 'column', width: '1085.75px', height: '798px', textAlign: 'center', marginLeft: '7.5%', marginRight: '50%', marginTop: '7%', marginBottom: '50%'}}>
+          <span style={{margin: 'auto', marginTop: '0', fontSize: '50px', fontWeight: '700', fontFamily: 'poppins', lineHeight: '52.5px'}}>Collection Spotlight</span>
+          <span style={{margin: 'auto', marginTop: '2vh', fontSize: '14px', lineHeight: '22.65px', fontFamily: 'Inter', fontWeight: '400', textAlign: 'center', marginBottom: '-68vh'}}>Discover extraordinary moments with our Spotlight Collection metatickets—exclusive access to premium events for an unforgettable experience. Grab yours today!</span>
+        <div style={{width: '1085.75px', height: '624px', display: 'flex', justifyContent: 'space-evenly', margin: 'auto', marginTop: '76.5vh'}}>
+      <TicketCard  image={'https://s3-alpha-sig.figma.com/img/bc7b/d2d1/a2c7e5def5b347470305864869a894b6?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YxtMQ-umkbEHlxMyMnstAs6rYbIBMoz6Y6e6X~XvOsr-rAQ2g4qOWln3w~caMGqtbtAtbCjyj-yjVTMTm1mZVFfJBk5KOXa491~GuF-sCId9i622FHtykZ-nY9kpx54GqgSCB2nGFH3HeaHmDDrU0aEinZpFFnqbmnXRqB9agt6U5PFCW70dobn1FS2-uCCVjf-JcgJzpDyt6xoO-4xWk6IWNKkJCo1K7Ad4KoEpKKDiFYyDhsXOKGZrevPj~1tdFMRrtdkTS8ckyL82IMwnzlMMtKVgab1EpeEiBiF-BW88PwJ0towH4BaKyuBx~E-cLgN0lW8hacJNXlAv-u1nFA__'} tittle={'Las Vegas Aviators'} date={'OCT 15'} day={'SUN'} time={'4:30 PM'} address={'Las Vegas Ballpark, Las Vegas, Nevada'} boxtitle={'Take Flight Collection'}/>
+      <TicketCard  image={'https://s3-alpha-sig.figma.com/img/3de4/4e83/b6e3aeda879dc6f22f94711c788789b5?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ptz8aSbr1X2gpkQvNp75uy5Qqc3G8thxATUNJrSlH2UpQlPHInbDDZzPDm06nh~Nz5I1JJ4DJV7c8-QhyhII56mMhaJJpXXDp1PCUpSFQ4e8Ye14EdQY91xENMHr1f0JdG2SSkVcxAMgzFhchgpPmcJgVvZX42PQo9HDwrB-Mu9YzL8HDg5lqq592kuVfpcoCk2mmirfFLs7nHYKlxKizeHFC38nNStqJTHYUJHGziz0RNo2oRTX9lYT5MCG0g7fSSu968zB9IjW7Xu5z337Wt3fLdxiQu12YbUec3D-iYVeMH-6xRitiF8XgVwKniDwWIEs6yrvu122pOCHDB~P6g__'} tittle={'Sacramento River Cats'} date={'OCT 15'} day={'SUN'} time={'4:30 PM'} address={'Sutter Health Park, Sacramento, California'} boxtitle={'Orange Collection'}/>
+      <TicketCard  image={'https://s3-alpha-sig.figma.com/img/bc7b/d2d1/a2c7e5def5b347470305864869a894b6?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YxtMQ-umkbEHlxMyMnstAs6rYbIBMoz6Y6e6X~XvOsr-rAQ2g4qOWln3w~caMGqtbtAtbCjyj-yjVTMTm1mZVFfJBk5KOXa491~GuF-sCId9i622FHtykZ-nY9kpx54GqgSCB2nGFH3HeaHmDDrU0aEinZpFFnqbmnXRqB9agt6U5PFCW70dobn1FS2-uCCVjf-JcgJzpDyt6xoO-4xWk6IWNKkJCo1K7Ad4KoEpKKDiFYyDhsXOKGZrevPj~1tdFMRrtdkTS8ckyL82IMwnzlMMtKVgab1EpeEiBiF-BW88PwJ0towH4BaKyuBx~E-cLgN0lW8hacJNXlAv-u1nFA__'} tittle={'Las Vegas Aviators'} date={'OCT 15'} day={'SUN'} time={'4:30 PM'} address={'Las Vegas Ballpark, Las Vegas, Nevada'} boxtitle={'Take Flight Collection'}/>
+        </div>
+        </div>
+      </div>
+    </div>
   );
 }
